@@ -1,4 +1,3 @@
-// MainActivity.kt
 package com.example.greetingcard
 
 import android.content.Intent
@@ -6,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-
-class MainActivity  : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +13,7 @@ class MainActivity  : AppCompatActivity() {
 
         val buttonExplicit: Button = findViewById(R.id.buttonExplicit)
         val buttonImplicit: Button = findViewById(R.id.buttonImplicit)
+        val buttonViewImage: Button = findViewById(R.id.buttonViewImage) // New button for third activity
 
         buttonExplicit.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
@@ -24,6 +23,12 @@ class MainActivity  : AppCompatActivity() {
         buttonImplicit.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
             intent.setClass(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+
+        // Start the third activity (View Image Activity) using explicit intent
+        buttonViewImage.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
             startActivity(intent)
         }
     }

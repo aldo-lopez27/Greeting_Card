@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.greetingcard"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
 
     <application
 
@@ -14,17 +22,24 @@
         android:theme="@style/Theme.GreetingCard"
         tools:targetApi="31">
 
-        <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".SecondActivity"
+            android:theme="@style/Theme.GreetingCard" />  <!-- Add theme to this activity -->
+        <activity android:name=".ThirdActivity"
+            android:theme="@style/Theme.GreetingCard" />  <!-- Add theme to this activity -->
 
+        <!-- MainActivity, ensure theme is set -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.GreetingCard">
+            android:theme="@style/Theme.GreetingCard"> <!-- Ensure the theme is set here too -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
 
     </application>
 

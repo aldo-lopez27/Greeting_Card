@@ -4,14 +4,15 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <ListView
-        android:id="@+id/listViewChallenges"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <Button
-        android:id="@+id/buttonMainActivity"
+        android:id="@+id/captureImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Main Activity" />
+        android:text="Capture Image" />
+
+    <ImageView
+        android:id="@+id/capturedImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- Set the visibility to GONE initially -->
 </LinearLayout>

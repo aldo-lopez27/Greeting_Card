@@ -21,6 +21,14 @@
         android:textSize="18sp" />
 
     <Button
+        android:id="@+id/buttonViewImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Image Activity"
+        android:layout_marginTop="20dp" />
+
+
+    <Button
         android:id="@+id/buttonExplicit"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

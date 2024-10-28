@@ -1,4 +1,3 @@
-// SecondActivity.kt
 package com.example.greetingcard
 
 import android.os.Bundle
@@ -6,7 +5,6 @@ import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.greetingcard.R
 
 class SecondActivity : AppCompatActivity() {
 
@@ -23,8 +21,10 @@ class SecondActivity : AppCompatActivity() {
         )
 
         val buttonMainActivity: Button = findViewById(R.id.buttonMainActivity)
+        val listView: ListView = findViewById(R.id.listViewChallenges) // Assuming you have a ListView in your layout
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, challenges)
+        listView.adapter = adapter // This is required to display the list
 
         buttonMainActivity.setOnClickListener {
             finish() // This will return to the MainActivity
